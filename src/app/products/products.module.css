@@ -1,0 +1,12 @@
+.navigate-button {
+  padding: 8px;
+  margin: 30px 0 0;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff0000;
+}
+
+.navigate-button:hover {
+  background-color: #65666e;
+}

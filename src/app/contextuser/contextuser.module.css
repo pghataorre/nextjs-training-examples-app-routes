@@ -1,0 +1,21 @@
+.context-button {
+  padding: 8px;
+  margin: 30px 20px 0;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff0000;
+  font-size: 16px;
+}
+
+.context-button:hover {
+  background-color: #65666e;
+}
+
+.count-example-container {
+  margin-top: 20px;
+}
+
+.count-example-container h2 {
+  margin: 20px 0;
+}

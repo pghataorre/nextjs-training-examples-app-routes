@@ -1,0 +1,33 @@
+.nav-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.nav-container ul {
+  display: block;
+  list-style: none;
+  position: relative;
+}
+
+.nav-container ul li {
+  padding: 15px;
+}
+
+.nav-container ul li ul {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  background-color: blueviolet;
+  width: 300px;
+}
+
+.nav-container ul li:hover ul {
+  display: block;
+}
+
+.nav-link {
+  font-size: 14px;
+}
+

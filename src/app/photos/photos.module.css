@@ -1,0 +1,25 @@
+.photos-container {
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.photos-container > ul {
+  list-style-type: none;
+}
+
+.photos-container > ul li {
+  width: 300px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  word-wrap: normal;
+  opacity: 0.4;
+}
+
+.photos-container > ul li:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0.8s ease-out;  
+  -moz-transition: opacity 0.8s ease-in-out;   
+}
