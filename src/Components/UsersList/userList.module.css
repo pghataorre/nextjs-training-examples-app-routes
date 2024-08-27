@@ -1,0 +1,13 @@
+.user-list ul {
+  margin: 0;
+  margin-top: 40px;
+}
+
+.user-list li {
+  padding: 20px;
+}
+
+.user-list li:hover {
+  text-decoration: underline;
+  color: red;
+}

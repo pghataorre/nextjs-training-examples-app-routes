@@ -7,7 +7,7 @@ import { IPhoto } from '../types';
 import PhotoList from '@/Components/PhotoLIst/PhotoList';
 
 const getPhotos = async (id: string) => {
-  const res = await fetch(`http://localhost:3001/api/photos/${id}`, {
+  const res = await fetch(`http://localhost:3000/api/photos/${id}`, {
     headers: {
       'Content-type': 'application/json'
     }
@@ -26,8 +26,6 @@ interface IPhotosProps {
 const Photos = ({ params }:IPhotosProps ) => {
   const [photosCollection, setPhotosCollection] = useState<IPhoto[]>([]);
   const { id } = params;
-
-
 
   useEffect(() => {
     (async () => {

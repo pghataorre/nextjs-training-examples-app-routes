@@ -3,17 +3,11 @@
 import PageLayout from '../../Components/PageLayout/PageLayout';
 import styles from './photos.module.css'
 import {useEffect, useState} from 'react';
-import Link from 'next/link';
 import { IPhoto } from './types';
 import PhotoList from '@/Components/PhotoLIst/PhotoList';
 
 const getPhotos = async () => {
-  const res = await fetch('http://localhost:3001/api/photos', {
-    headers: {
-      'Content-type': 'application/json'
-    }
-  });
-
+  const res = await fetch('http://localhost:3000/api/photos');
   const response = await res.json();
   return response.photos;
 }
@@ -26,9 +20,6 @@ const Photos = () => {
       const photos = await getPhotos();
       setPhotosCollection(photos);
     })();
-
-    console.log(photosCollection)
-
   }, [])
 
 

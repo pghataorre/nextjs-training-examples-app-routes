@@ -18,7 +18,7 @@ const defaultValues: TThemeContext = {
     primary: '#007bff',
     secondary: '#6c7d57d',
   },
-  testAction: () => alert('this is a test from th theme provider'),
+  testAction: () => alert('this is a test from the theme provider'),
 }
 
 const ThemeContext = createContext<TThemeContext>(defaultValues);
