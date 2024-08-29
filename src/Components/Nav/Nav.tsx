@@ -19,10 +19,13 @@ const Nav = () => {
           <Link href="/docs" className={styles['nav-link']}>DOCS CATCH ALL EXAMPLE</Link>
         </li>
         <li>
-          <Link href="/users" className={styles['nav-link']}>USERS LIST - FROM API USING getStaticProps()</Link>
+          <Link href="/users" className={styles['nav-link']}>USERS LIST - FROM API USING ROUTE API</Link>
         </li>
         <li>
-          <Link href="/postblogs" className={styles['nav-link']}>BLOGS getStaticProps()</Link>
+          <Link href="/users/adduser" className={styles['nav-link']}>ADD USER - EXAMPLE FORM POST - USING ROUTE API</Link>
+        </li>
+        <li>
+          <Link href="/postblogs" className={styles['nav-link']}>BLOGS - TO DO </Link>
         </li>
         <li>
           <Link href="/privatefolders" className={styles['nav-link']}>PRIVATE FOLDERS</Link>

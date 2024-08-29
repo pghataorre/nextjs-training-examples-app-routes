@@ -5,6 +5,7 @@ import styles from '../photos.module.css'
 import {useEffect, useState} from 'react';
 import { IPhoto } from '../types';
 import PhotoList from '@/Components/PhotoLIst/PhotoList';
+import Loader from '@/Components/Loader/Loader';
 
 const getPhotos = async (id: string) => {
   const res = await fetch(`http://localhost:3000/api/photos/${id}`, {
@@ -41,7 +42,7 @@ const Photos = ({ params }:IPhotosProps ) => {
         <div className={styles['photos-container']}>
           {photosCollection?.length 
             ? (<PhotoList photoList={photosCollection}/>)
-            : (<><h2>Loading .... </h2></>)
+            : ((<Loader />))
           }
         </div>
     </PageLayout>

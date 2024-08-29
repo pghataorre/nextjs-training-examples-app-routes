@@ -14,3 +14,18 @@ export async function GET() {
   }
 }
 
+export async function POST(req) {
+  const res = await req.json();
+
+  res.password = '**********';
+
+  res.id = crypto.randomUUID();
+  return Response.json(res, 
+    {headers: 
+      {
+        "Content-Type": "application/json"
+      }
+    }
+  );
+}
+
