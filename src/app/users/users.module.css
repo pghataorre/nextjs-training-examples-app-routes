@@ -1,0 +1,50 @@
+.user-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+}
+
+.user-form > div  {
+  width: 50%;
+}
+
+.user-form label span {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.user-form input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  padding: 15px;
+  margin: 0 0 20px 0;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #ffffff; 
+}
+
+.user-form button {
+  font-size: 16px;
+  padding: 10px;
+  margin: 20px 0 0 0;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+
+.user-posted-details {
+  margin: 20px 0 0 40px;
+}
+
+.user-posted-details ul {
+  list-style: none;
+  margin: 20px 0 0 0;
+}
+
+.user-posted-details ul li {
+  margin: 20px 0 0 0;
+}

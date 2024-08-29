@@ -1,10 +1,12 @@
-.user-list ul {
+.user-list {
   margin: 0;
   margin-top: 40px;
+  list-style: none;
+  padding: 0;
 }
 
 .user-list li {
-  padding: 20px;
+  padding: 10px;
 }
 
 .user-list li:hover {
