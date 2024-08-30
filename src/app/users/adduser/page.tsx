@@ -31,10 +31,6 @@ const AddUser = () => {
             username: userNameRef?.current?.value  || null,
             password: passwordRef?.current?.value || null
         };
-
-        debugger;
-
-   
     
         try {
             const res = await fetch('http://localhost:3000/api/users', {
