@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content:first baseline;
   align-items: center;
-  margin: 50px auto;
+  margin: 0 auto 0;
+  padding: 0;
   height: 100vh;
 }
 

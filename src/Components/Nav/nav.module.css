@@ -1,5 +1,4 @@
 .nav-container {
-  margin-bottom: 30px;
   display: flex;
   justify-content: flex-start;
   width: 100%;
@@ -16,18 +15,29 @@
 }
 
 .nav-container ul li ul {
+  padding-top: 75px;
   position: absolute;
+  top: 0px;
+  left: -100vw;
   z-index: 1;
-  display: none;
-  background-color: blueviolet;
-  width: 300px;
+  background-color: #000;
+  width: 50vh;
+  height: 100vh;
+  color: #fff;
+  border-right: 5px solid red;
+  transition: 0.9s;
 }
 
 .nav-container ul li:hover ul {
-  display: block;
+  left: 0px;
+  transition: 0.5s;
 }
 
 .nav-link {
-  font-size: 14px;
+  font-size: 23px;
+}
+
+.nav-link:hover {
+  color: #ff0000;
 }
 

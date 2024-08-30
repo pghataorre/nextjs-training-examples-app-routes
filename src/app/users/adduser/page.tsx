@@ -1,32 +1,40 @@
 "use client"
-import { SyntheticEvent, useState } from 'react';
+import { SyntheticEvent, useState, useRef } from 'react';
 import PageLayout from '../../../Components/PageLayout/PageLayout';
 import styles from '../users.module.css';
 import Loader from '@/Components/Loader/Loader';
 
 interface IPostUserResponse {
     id?: string;
-    name: string;
-    email: string;
-    username: string;
-    password: string;
+    name: string | null;
+    email: string | null;
+    username: string | null;
+    password: string | null;
 }
 
 const AddUser = () => {
-    const [userPost, setUserPost] = useState<IPostUserResponse | undefined>();
+    const [userPost, setUserPost] = useState<IPostUserResponse | null>(null);
     const [isPosting, setIsPosting] = useState<boolean>(false);
+
+    const nameRef = useRef<HTMLInputElement | null>(null);
+    const emailRef = useRef<HTMLInputElement | null>(null);
+    const userNameRef = useRef<HTMLInputElement | null>(null);
+    const passwordRef = useRef<HTMLInputElement | null>(null);
 
     const addUsers = async (event: SyntheticEvent) => {
         event.preventDefault();
         setIsPosting(true);
-        const userForm: any = document.getElementById('userForm');
-        const formData: any = new FormData(userForm);
-    
-        let userDetailEntries: any = {};
-        for (let keyValue of formData.entries()) {
-            userDetailEntries[keyValue[0]] = keyValue[1];
-        }
-        
+
+        const userDetailEntries: IPostUserResponse = {
+            name: nameRef?.current?.value || null,
+            email: emailRef?.current?.value  || null,
+            username: userNameRef?.current?.value  || null,
+            password: passwordRef?.current?.value || null
+        };
+
+        debugger;
+
+   
     
         try {
             const res = await fetch('http://localhost:3000/api/users', {
@@ -55,19 +63,19 @@ const AddUser = () => {
                     <form method="post" id="userForm" onSubmit={(e) => addUsers(e)} >
                         <label htmlFor="name">
                             <span>Name:</span>
-                            <input type="text" name="name" id="name" placeholder="Add name here" />
+                            <input type="text" name="name" id="name" placeholder="Add name here" ref={nameRef}/>
                         </label>
                         <label htmlFor="email">
                             <span>Email:</span>
-                            <input type="email" name="email" id="email" placeholder="Add an Email" />
+                            <input type="email" name="email" id="email" placeholder="Add an Email" ref={emailRef}/>
                         </label>
                         <label htmlFor="username">
                             <span>Username:</span>
-                            <input type="text" name="username" id="username" placeholder="Add a username" />
+                            <input type="text" name="username" id="username" placeholder="Add a username" ref={userNameRef}/>
                         </label>
                         <label htmlFor="password">
                             <span>Password:</span>
-                            <input type="password" name="password" id="password" placeholder="Add a password" />
+                            <input type="password" name="password" id="password" placeholder="Add a password" ref={passwordRef}/>
                         </label>
                         <label htmlFor="submitform">
                             <button type="submit" name="submitform" id="submitform">Submit Details</button>
